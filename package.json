@@ -1,0 +1,42 @@
+{
+    "name": "Eindopdracht_Nick_Ferran_WEBS5",
+    "version": "1.0.0",
+    "description": "A webs5 API",
+    "main": "index.js",
+    "scripts": {
+        "build-dev": "node seed/seed.js && node app.js",
+        "release": "heroku container:push web -a cloud-services-webs-5 && heroku container:release web -a cloud-services-webs-5",
+        "test": "nyc mocha --timeout 10000",
+        "start": "node app.js"
+    },
+    "keywords": [],
+    "author": "Ferran Hendriks & Nick van Hoesel",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^4.0.1",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "got": "^11.8.2",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.12.2",
+        "mongoose-unique-array": "^0.3.4",
+        "morgan": "~1.9.0",
+        "multer": "^1.4.2",
+        "passport": "^0.4.1",
+        "passport-jwt": "^4.0.0",
+        "passport-local": "^1.0.0",
+        "path": "^0.12.7",
+        "socket.io": "^4.0.1",
+        "xml-js": "^1.6.11"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "chai-http": "^2.0.1",
+        "faker": "^4.1.0",
+        "mocha": "^2.4.5",
+        "nyc": "^15.1.0",
+        "supertest": "^3.0.0"
+    }
+}
